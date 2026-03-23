@@ -1,4 +1,8 @@
-# Virtual environment
+# -----------------------------
+# Python / FastAPI Project .gitignore
+# -----------------------------
+
+# Virtual environments
 venv/
 ENV/
 env/
@@ -14,9 +18,11 @@ __pycache__/
 *.db
 *.sqlite3
 
-# Alembic migration cache
+# Alembic migration cache & artifacts
 alembic.ini
 alembic/versions/__pycache__/
+alembic/README
+alembic/script.py.mako
 
 # Logs
 *.log
@@ -33,3 +39,30 @@ alembic/versions/__pycache__/
 # OS files
 .DS_Store
 Thumbs.db
+
+# Test / coverage reports
+.coverage
+htmlcov/
+*.cover
+
+# pytest cache
+.pytest_cache/
+
+# MyPy / type checker cache
+.mypy_cache/
+
+# Uvicorn / FastAPI reload artifacts
+*.pid
+
+# -----------------------------
+# Project-specific ignores
+# -----------------------------
+
+# Keep only create_superUser.py, ignore other dev scripts
+scripts/seed_*.py
+scripts/view_data.py
+test_db.py
+
+# Ignore admin-only files
+app/routes/adminRoutes.py
+app/schemas/adminSchema.py
