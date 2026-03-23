@@ -6,7 +6,10 @@ class RestaurantCreate(BaseModel):
     cuisine: str
 
 class RestaurantRead(BaseModel):
-    id: int
+    restaurant_id: int
     name: str
     location: str
     cuisine: str
+
+    class Config:
+        orm_mode = True

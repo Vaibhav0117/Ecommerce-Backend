@@ -1,18 +1,34 @@
-# Python cache
-__pycache__/
-*.py[cod]
-
 # Virtual environment
 venv/
+ENV/
+env/
+.venv/
 
-# VS Code settings
-.vscode/
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# SQLite database files (local dev only)
+*.db
+*.sqlite3
+
+# Alembic migration cache
+alembic.ini
+alembic/versions/__pycache__/
 
 # Logs
 *.log
 
 # Environment variables
 .env
+
+# IDE/editor files
+.vscode/
+.idea/
+*.swp
+*.swo
 
 # OS files
 .DS_Store
